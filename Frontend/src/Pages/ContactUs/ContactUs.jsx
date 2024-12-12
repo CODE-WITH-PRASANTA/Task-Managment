@@ -8,7 +8,7 @@ const ContactUs = () => {
     const formData = new FormData(event.target);
 
     // Adding Web3Forms Public Access Key
-    formData.append("access_key", "b1db0468-36a7-4f03-9380-71220b0a8894");
+    formData.append("access_key", "0b358e88-aa4b-4279-aa0d-5b6f38e5c13d");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -46,14 +46,14 @@ const ContactUs = () => {
           <div className="contact-details">
             <div className="reach-us">
               <h4>Reach Us</h4>
-              <p><strong>Azam Hitech Services Private Limited</strong></p>
-              <p>Plot no 70/4126, Behind Mayfair Lagoon, Jayadev Vihar, Bhubaneswar-751013</p>
-              <p>Email: <a href="mailto:PayPrime.in@gmail.com">PayPrime.in@gmail.com</a></p>
-              <p>📞 <a href="tel:+919438681115">+91-9438681115</a> (Mon - Fri, 10AM - 6PM)</p>
+              <p><strong>Bajaj Money</strong></p>
+              <p></p>
+              <p>Email: <a href="mailto:bajajmoney15@gmail.com">bajajmoney15@gmail.com</a></p>
+              <p>🟢 <a href="https://wa.me/9650074522">+91-9650074522</a> (Mon - Sun, 10AM - 6PM)</p>
             </div>
           </div>
           <div className="action-buttons">
-            <a href="https://wa.me/6372545244" target="_blank" rel="noopener noreferrer" className="whatsapp-button">WhatsApp</a>
+            <a href="https://wa.me/9650074522" target="_blank" rel="noopener noreferrer" className="whatsapp-button">WhatsApp</a>
           </div>
         </div>
 

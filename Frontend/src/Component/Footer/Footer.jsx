@@ -74,7 +74,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="copyright-container">
           <img src={CopyrightC} alt="Copyright" />
-          <span>2024 Bajaj Financially - All Rights Reserved</span>
+          <span>2024 Bajaj Money - All Rights Reserved</span>
         </div>
         <div className="credits">
           <span>Designed by Developer (Prasanta)</span>

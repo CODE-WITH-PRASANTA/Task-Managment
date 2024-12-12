@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Referal.css';
 
 // Assets for "How It Works"
@@ -13,11 +13,23 @@ import step2 from '../../assets/signup-step-2.png';
 import step3 from '../../assets/purchase-step-3.png';
 import step4 from '../../assets/getreward-step-4.png';
 
-
-//asserts of the arrow add between the steps
-import arrow from '../../assets/arrow-step.png'
+// Assets of the arrow add between the steps
+import arrow from '../../assets/arrow-step.png';
 
 const Referal = () => {
+  // Example: Replace this with actual login user's phone number from your app state
+
+  const handleStartReferring = () => {
+    const websiteLink = "https://www.bajajmoney.com"; // Replace with your website URL
+    const message = `Hey, join this amazing referral program and earn rewards! Here’s my referral code: Phone Number}. Click here to join: ${websiteLink}`;
+    
+    // Construct the WhatsApp URL to open the WhatsApp app with the pre-filled message
+    const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp Web or the app with the message
+    window.open(whatsappURL, '_blank');
+  };
+
   return (
     <div className="referal-container">
       <h1 className="referal-heading">How It Works</h1>
@@ -43,44 +55,43 @@ const Referal = () => {
         </div>
         <div className="step">
           <img src={shopvipstep3} alt="Referee Shops" className="step-image" />
-          <h2>3. Referee Shops</h2>
+          <h2>3. Referee Bajaj Money</h2>
           <p>
-            Your referee will receive INR 350 in their Shoppre wallet upon signing up.
+            Your referee will receive INR 50 in their Vip wallet upon signing up.
           </p>
         </div>
         <div className="step">
           <img src={getrewordstep4} alt="Get Rewarded" className="step-image" />
           <h2>4. Get Rewarded!</h2>
           <p>
-            Once they make a purchase, you receive a Wallet Balance of INR 500!
+            Once they make a purchase, you receive a Wallet Balance of INR 150!
           </p>
         </div>
       </div>
 
-      <button className="cta-button">Start Referring Now</button>
+      <button className="cta-button" onClick={handleStartReferring}>Start Referring Now</button>
 
       <div className="reward-steps">
-  <div className="reward-step">
-    <img src={step1} alt="Share" className="reward-step-icon" />
-    <h3>Share</h3>
-  </div>
-  <img src={arrow} alt="Arrow" className="reward-arrow" />
-  <div className="reward-step">
-    <img src={step2} alt="Sign Up" className="reward-step-icon" />
-    <h3>Sign Up</h3>
-  </div>
-  <img src={arrow} alt="Arrow" className="reward-arrow" />
-  <div className="reward-step">
-    <img src={step3} alt="Purchase" className="reward-step-icon" />
-    <h3>Purchase</h3>
-  </div>
-  <img src={arrow} alt="Arrow" className="reward-arrow" />
-  <div className="reward-step">
-    <img src={step4} alt="Get Rewarded" className="reward-step-icon" />
-    <h3>Get Rewarded</h3>
-  </div>
-</div>
-
+        <div className="reward-step">
+          <img src={step1} alt="Share" className="reward-step-icon" />
+          <h3>Share</h3>
+        </div>
+        <img src={arrow} alt="Arrow" className="reward-arrow" />
+        <div className="reward-step">
+          <img src={step2} alt="Sign Up" className="reward-step-icon" />
+          <h3>Sign Up</h3>
+        </div>
+        <img src={arrow} alt="Arrow" className="reward-arrow" />
+        <div className="reward-step">
+          <img src={step3} alt="Purchase" className="reward-step-icon" />
+          <h3>Purchase</h3>
+        </div>
+        <img src={arrow} alt="Arrow" className="reward-arrow" />
+        <div className="reward-step">
+          <img src={step4} alt="Get Rewarded" className="reward-step-icon" />
+          <h3>Get Rewarded</h3>
+        </div>
+      </div>
     </div>
   );
 };

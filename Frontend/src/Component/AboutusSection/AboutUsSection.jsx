@@ -11,19 +11,19 @@ const AboutUsSection= () => {
 <div className="about-sec-section">
 <div className="about-sec-container">
             <h2 className="about-sec-title">About Us</h2>
-            <p className="about-sec-mission">Our mission is Design the best websites around</p>
+            <p className="about-sec-mission">Our mission is to make entertainment rewarding and earning effortless</p>
             <div className="about-sec-content">
                 <div className="about-sec-text">
-                    <h3>I'm In The Devlop Industry With 2 Years Of Experience.</h3>
-                    <p>We are Prasanta Kumar, a skilled professional Web developer, and Rehan a dedicated Digital marketing specialist. Together, we create user-friendly, attractive, and effective websites for all needs. Our goal is to make your online presence seamless and engaging, with a focus on quality and performance. We combine development expertise and marketing know-how to build and optimize sites that work beautifully and capture attention. From simple websites to custom solutions, we’re here to help you succeed online. Partner with us for friendly service and reliable results you can trust. Let's create something amazing together!</p>
+                    <h3>We're Innovators With a Passion for Rewards and Growth.</h3>
+                    <p>We are Samar Khaira, an innovative CEO, Ravi Chandra, a dynamic strategist, and Vikash Madan, a skilled professional dedicated to providing rewarding opportunities for all. Together, we’ve built a platform where users can complete tasks and earn exciting rewards, ensuring every effort is worthwhile.Our services go beyond task completion. We also offer secure investment opportunities with guaranteed payments, enabling you to grow your wealth confidently. Join us to explore a world where earning is simple, investment is rewarding, and trust is our foundation. Together, we’re redefining opportunities and helping you reach your goals seamlessly. Let’s create success, one task at a time!</p>
                     <div className="skills-section">
-                        <h4>Professional Skills Work</h4>
+                        <h4>Our Expertise and Skills</h4>
                         <div className="skills">
-                            {['Web Designing', 'App Designing', '! ADS & SEO', '3D Designing'].map((skill, index) => (
+                            {['Task Reward', 'Investments', 'Guaranted Pay', 'Engagement'].map((skill, index) => (
                                 <div className="box" key={index}>
                                     <div className="bar">
                                         <canvas className="circle"></canvas>
-                                        <span>{[95, 70, 95, 98][index]}%</span>
+                                        <span>{[95, 50, 100, 98][index]}%</span>
                                     </div>
                                     <p>{skill}</p>
                                 </div>
@@ -34,8 +34,8 @@ const AboutUsSection= () => {
                 <div className="about-sec-image">
                     <img src={aboutusimg} alt="Profile" />
                     <div className="fl-about-sec-img-content">
-                        <h4>Prasanta Kumar Khuntia</h4>
-                        <p>Mern Stack Developer</p>
+                        <h4>SAMAR KHAIRA</h4>
+                        <p>CEO : BAJAJ MONEY</p>
                     </div>
                 </div>
             </div>

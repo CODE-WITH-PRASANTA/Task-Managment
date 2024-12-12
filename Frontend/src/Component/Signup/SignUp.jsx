@@ -26,15 +26,7 @@ const SignUp = () => {
           return;
         }
       
-        if (password !== confirmPassword) {
-          setError('Passwords do not match');
-          return;
-        } else if (password.length < 6 || password.length > 8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-          setError('Password must be 6-8 characters long and contain at least one letter and one digit.');
-          return;
-        }
-      
-        setError('');
+        setError('');  // Clear any previous error
       
         try {
           const response = await axios.post('http://localhost:5000/api/auth/signup', {
@@ -48,7 +40,8 @@ const SignUp = () => {
         } catch (err) {
           setError(err.response?.data?.message || 'Signup failed');
         }
-      };
+    };
+
       
 
     const handleLoginPass = () => navigate('/signin');

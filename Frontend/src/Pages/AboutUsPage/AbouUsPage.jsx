@@ -18,13 +18,13 @@ const About = () => {
       <div className="about-page">
         <section className="about-intro">
           <h2>About Us</h2>
-          <h1>Payprime: Simplify Payments, Amplify Success!</h1>
+          <h1>Bajaj Money: Simplify Payments, Amplify Success!</h1>
           <div className="about-content">
             <p>
-              With a variety of payment options for both B2B and B2C companies, Payprime is the top provider of payment gateway services in India. We offer a dependable, safe, and easy-to-use platform for accepting payments from clients worldwide.
+            We are Samar Khaira, an innovative CEO, Ravi Chandra, a dynamic strategist, and Vikash Madan, a skilled professional dedicated to providing rewarding opportunities for all. Together, we’ve built a platform where users can complete tasks and earn exciting rewards, ensuring every effort is worthwhile.
             </p>
             <p>
-              We also provide a range of tools, such as real-time reporting, fraud protection, and dispute resolution. Our team is available 24/7 to assist with any issues, ensuring the best possible payment experience for our clients.
+            Join us to explore a world where earning is simple, investment is rewarding, and trust is our foundation. Together, we’re redefining opportunities and helping you reach your goals seamlessly. Let’s create success, one task at a time!
             </p>
             <img src={teamImage} alt="Team working on project" className="about-image" />
           </div>
@@ -32,10 +32,10 @@ const About = () => {
 
         <section className="about-mission">
           <h2>What We Do</h2>
-          <h3>Mission, Vision, And Values Of Payprime</h3>
-          <p><strong>Mission:</strong> To provide the best possible payment solutions in India, making online and offline payments easy, secure, and affordable.</p>
-          <p><strong>Vision:</strong> To be the most trusted and reliable payment gateway service provider, empowering businesses and individuals to pay with ease and confidence.</p>
-          <p><strong>Values:</strong> Our values guide our actions and are the foundation of our success.</p>
+          <h3>Mission, Vision, And Values Of Bajaj Money</h3>
+          <p><strong>Mission:</strong> To provide secure and rewarding opportunities for individuals to earn and invest confidently.</p>
+          <p><strong>Vision:</strong> To empower users with simple, reliable ways to grow their wealth and achieve financial freedom.</p>
+          <p><strong>Values:</strong> Guided by transparency, reliability, and security, we strive to create meaningful opportunities for all.</p>
         </section>
 
         <section className="about-stats">
@@ -46,13 +46,13 @@ const About = () => {
           </div>
           <div className="stat">
             <i className="fa fa-tasks"></i>
-            <h4>Projects</h4>
+            <h4>Tasks</h4>
             <p>1200+</p>
           </div>
           <div className="stat">
             <i className="fa fa-users-cog"></i>
             <h4>Team Members</h4>
-            <p>50+</p>
+            <p>3</p>
           </div>
           <div className="stat">
             <i className="fa fa-phone-alt"></i>
@@ -64,12 +64,9 @@ const About = () => {
 
 
       <div className="About-features-container">
-      <h2>Why Businesses Trust Payprime, A Leading Payment Gateway Provider</h2>
+      <h2>Why Businesses Trust Bajaj Money: A Leading Platform for Earning and Investment</h2>
       <p className="About-features-description">
-        Because of its safe, dependable, and reasonably priced payment processing solutions,
-        businesses of all sizes rely on Payprime, a top provider of payment gateways in India.
-        Businesses may easily take payments from both domestic and foreign consumers online and offline
-        with Payprime’s extensive About-feature set and integrations.
+      Due to our secure, dependable, and cost-effective solutions, businesses of all sizes trust us. Our platform allows users to effortlessly complete tasks, earn rewards, and invest securely. With a comprehensive set of features and integrations, we ensure a seamless experience for both online and offline transactions, empowering businesses to grow confidently.
       </p>
       <button className="get-started-btn">Get Started</button>
 
@@ -87,12 +84,12 @@ const About = () => {
         <div className="About-feature-box">
           <FaLightbulb className="About-feature-icon" />
           <h3>Innovation</h3>
-          <p>We are constantly innovating to develop new and innovative payment solutions that meet our customers'needs.</p>
+          <p>We continuously innovate to provide secure, rewarding, and seamless opportunities for our users.</p>
         </div>
         <div className="About-feature-box">
           <FaMedal className="About-feature-icon" />
           <h3>Excellence</h3>
-          <p>We strive to provide our customers with the best possible payment experience.</p>
+          <p>We strive to provide our customers with the best possible Task & Investment experience.</p>
         </div>
       </div>
     </div>
@@ -100,7 +97,7 @@ const About = () => {
     <div className="subscribe-section">
       <h2 className="subscribe-title">Ready to Get Started?</h2>
       <p className="subscribe-description">
-        We take security very seriously at Indicpay. All of your customers’ payment information is encrypted
+        We take security very seriously at Bajaj Money. All of your customers’ payment information is encrypted
         and protected with the latest security technologies.
       </p>
       <div className="subscribe-input-container">

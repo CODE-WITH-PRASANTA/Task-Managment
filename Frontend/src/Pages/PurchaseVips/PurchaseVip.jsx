@@ -20,92 +20,92 @@ const PurchaseVip = () => {
         </div>
 
         <div className="purchase-plans">
-          <div className="all-purchase-section">
-            {/* Plan 1 */}
-            <div className="plan">
-              <h2>Free</h2>
-              <p className="price">₹0 per user/Onetime</p>
-              <button className="buy-now" onClick={() => handleBuyNowClick('Free')}>Make a Free Trial Now</button>
-              <ul>
-                <li>Customizable layout options</li>
-                <li>Responsive design by choice</li>
-                <li>Fast loading speed optimization</li>
-                <li>User-friendly content management system (CMS)</li>
-                <li className="highlight">Hosting and domain included</li>
-                <li className="highlight">Free maintenance and updates</li>
-              </ul>
-            </div>
+  <div className="all-purchase-section">
+    <div className="plan">
+      <h2>Free</h2>
+      <p className="price">₹0 per user/Onetime</p>
+      <button className="buy-now">Start Free Trial</button>
+      <ul>
+        <li>Sign up and earn daily rewards</li>
+        <li>Complete tasks like watching videos and giving reviews</li>
+        <li>Earn through referrals</li>
+        <li>Join now and start earning from day one!</li>
+        <li className="highlight">Limited daily rewards</li>
+      </ul>
+      {/* <p className="earning-opportunity">Invest your time by completing simple tasks and get rewarded daily. Earn by referring others and completing surveys or watching videos!</p> */}
+    </div>
 
-            {/* Plan 2 */}
-            <div className="plan">
-              <h2>Vip-1</h2>
-              <p className="price">₹399 per user/OneTime</p>
-              <button className="buy-now" onClick={() => handleBuyNowClick('Vip-1')}>Buy now</button>
-              <ul>
-                <li>Business-specific templates</li>
-                <li>Integration with Google Analytics</li>
-                <li>Social media integration</li>
-                <li>Support for team collaboration</li>
-                <li className="highlight">Free domain hosting services</li>
-              </ul>
-            </div>
+    <div className="plan">
+      <h2>Vip-1</h2>
+      <p className="price">₹299 per user/Onetime</p>
+      <button className="buy-now">Buy now</button>
+      <ul>
+        <li>Invest in tasks and get daily profits</li>
+        <li>Earn by referring friends</li>
+        <li>Complete tasks like watching videos, reviewing services, and more</li>
+        <li>Access to exclusive tasks for higher rewards</li>
+        <li className="highlight">Free rewards for every task completed</li>
+      </ul>
+      {/* <p className="earning-opportunity">Start investing now and complete tasks like watching promotional videos, giving reviews, and referring friends. The more you engage, the higher your earnings!</p> */}
+    </div>
 
-            <div className="plan">
-            <h2>Vip-3</h2>
-            <p className="price">₹499 per company/OneTime</p>
-            <button className="buy-now" onClick={() => handleBuyNowClick('Vip-2')}>Buy now</button>
-            <ul>
-              <li>Corporate-grade templates designed for larger organizations</li>
-              <li>Customer support portal</li>
-              <li>High-capacity hosting and bandwidth</li>
-              <li className="highlight">Free domain hosting services</li>
-            </ul>
-          </div>
+    <div className="plan">
+      <h2>Vip-2</h2>
+      <p className="price">₹499 per company/OneTime</p>
+      <button className="buy-now">Buy now</button>
+      <ul>
+        <li>Earn by completing simple daily tasks</li>
+        <li>Refer others to earn additional rewards</li>
+        <li>Watch videos, participate in surveys, and more</li>
+        <li>Unlock higher rewards with a one-time investment</li>
+        <li className="highlight">Earn daily profit with your investment</li>
+      </ul>
+      {/* <p className="earning-opportunity">Invest to unlock exclusive tasks, daily rewards, and more. Get started today and earn as you complete simple actions like watching videos and referring others!</p> */}
+    </div>
 
-          <div className="plan">
-            <h2>Vip-4</h2>
-            <p className="price">₹599 per user/Onetime</p>
-            <button className="buy-now" onClick={() => handleBuyNowClick('Vip-3')}>Buy now</button>
-            <ul>
-              <li>Custom API integrations</li>
-              <li>Secure API Connections</li>
-              <li>Customizable Data Display</li>
-              <li>Error Handling & Logging</li>
-              <li className="highlight">Free domain hosting services</li>
-            </ul>
-          </div>
+    <div className="plan">
+      <h2>Vip-3</h2>
+      <p className="price">₹599 per user/Onetime</p>
+      <button className="buy-now">Buy now</button>
+      <ul>
+        <li>Access to premium tasks for high rewards</li>
+        <li>Complete tasks and earn daily</li>
+        <li>Earn through referrals and tasks completion</li>
+        <li>Exclusive rewards and bonuses for active users</li>
+        <li className="highlight">Daily profit for every task completed</li>
+      </ul>
+      {/* <p className="earning-opportunity">With this plan, start earning by completing video watching, surveys, and referrals. The more you do, the more you earn! Get rewarded daily.</p> */}
+    </div>
 
-          <div className="plan">
-            <h2>Vip-5</h2>
-            <p className="price">₹699 per user/Onetime</p>
-            <button className="buy-now" onClick={() => handleBuyNowClick('Vip-4')}>Buy now</button>
-            <ul>
-              <li>Integrated payment gateway</li>
-              <li>Multiple Payment Methods</li>
-              <li>Integration with Admin Panel</li>
-              <li>Refunds & Cancellations</li>
-              <li>Custom Branding for Checkout Pages</li>
-              <li>Secure transactions</li>
-              <li className="highlight">Free domain hosting services</li>
-            </ul>
-          </div>
-          <div className="plan">
-            <h2>Vip-6</h2>
-            <p className="price">₹699 per user/Onetime</p>
-            <button className="buy-now" onClick={() => handleBuyNowClick('Vip-5')}>Buy now</button>
-            <ul>
-              <li>Integrated payment gateway</li>
-              <li>Multiple Payment Methods</li>
-              <li>Integration with Admin Panel</li>
-              <li>Refunds & Cancellations</li>
-              <li>Custom Branding for Checkout Pages</li>
-              <li>Secure transactions</li>
-              <li className="highlight">Free domain hosting services</li>
-            </ul>
-          </div>
+    <div className="plan">
+      <h2>Vip-4</h2>
+      <p className="price">₹699 per user/Onetime</p>
+      <button className="buy-now">Buy now</button>
+      <ul>
+        <li>Multiple ways to earn daily rewards</li>
+        <li>Referral program for additional earnings</li>
+        <li>Complete tasks like watching videos and giving reviews</li>
+        <li>Exclusive rewards for top performers</li>
+        <li className="highlight">Earn money for completing simple tasks</li>
+      </ul>
+      {/* <p className="earning-opportunity">Maximize your earnings with this plan! Complete more tasks, refer more people, and enjoy higher daily rewards!</p> */}
+    </div>
 
-          </div>
-        </div>
+    <div className="plan">
+      <h2>Vip-5</h2>
+      <p className="price">₹999 per user/Onetime</p>
+      <button className="buy-now">Buy now</button>
+      <ul>
+        <li>Highest earning potential with premium tasks</li>
+        <li>Earn rewards by completing videos, surveys, and referrals</li>
+        <li>Exclusive tasks for top-tier users</li>
+        <li>Complete tasks for higher daily profits</li>
+        <li className="highlight">Special bonuses for active users</li>
+      </ul>
+      
+    </div>
+  </div>
+</div>
       </div>
     </>
   );

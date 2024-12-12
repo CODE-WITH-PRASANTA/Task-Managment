@@ -28,6 +28,7 @@ function App() {
 
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+  const isAuthRoute = location.pathname === '/signup' || location.pathname === '/signin'; // Check for SignUp or SignIn routes
 
   const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
 
@@ -37,7 +38,7 @@ function App() {
         <Loader />
       ) : (
         <>
-          {!isAdminRoute && <Navbar />} {/* Hide Navbar on admin routes */}
+          {!isAdminRoute && <Navbar />} {/* Hide Navbar on admin and auth routes */}
           <Routes>
               {/* Public Routes */}
               <Route path="/" element={<Home />} />
@@ -48,13 +49,13 @@ function App() {
               <Route path="/adminlogin" element={<AdminLogin />} />
               <Route path='/about' element={<About />}/>
               <Route 
-              path='/payment'
-               element={
-                <UserPrivateRoute>
-                <MakePayment />
-                </UserPrivateRoute>
-                }/>
-
+                path='/payment'
+                element={
+                  <UserPrivateRoute>
+                    <MakePayment />
+                  </UserPrivateRoute>
+                }
+              />
 
               {/* User Private Route */}
               <Route
@@ -75,15 +76,14 @@ function App() {
                   </AdminPrivateRoute>
                 }
               />
-            </Routes>
-
-
-          {!isAdminRoute && <Footer />}
+          </Routes>
+          {!isAdminRoute && !isAuthRoute && <Footer />} {/* Hide Footer on admin and auth routes */}
         </>
       )}
     </>
   );
 }
+
 
 export default function AppWrapper() {
   return (
