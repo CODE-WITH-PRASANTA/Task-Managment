@@ -1,0 +1,471 @@
+
+.about-page {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Hero Section */
+.about-banner-bg {
+    width: 100%;
+    height: 580px;
+    position: relative;
+    animation: zoom-in-zoom-out;
+    background-position: center;
+    background: linear-gradient(rgb(0 0 0 / 60%), rgb(18 18 18 / 50%)), url(../../assets/aboutBanner.jpg) center;
+    background-size: cover;
+}
+
+.about-banner-bg h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    padding-top: 10%;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.9;
+    text-shadow: 1px 1px 6px rgb(167 165 165) !important;
+}
+
+.heading-div {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
+
+/* About Content Section */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.8;
+    text-align: left;
+    margin: 0;
+}
+
+.about-image {
+    width: 350px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+/* Headings */
+.about-intro h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-intro h1 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.about-intro h2:before, .about-intro h2:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #333;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.about-mission {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: start;
+    padding-top: 40px;
+}
+
+.about-mission h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-mission h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-mission p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Stats Section */
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stat {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    background-color: grey;
+    border-radius: 0px 50px 0px 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slow-rotate 5s infinite linear;
+    cursor: pointer;
+}
+
+.stat:hover {
+    transform: rotate(10deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.stat i {
+    font-size: 2.2em;
+    color: #00b7b1;
+    margin-bottom: 10px;
+}
+
+.stat h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.stat p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Keyframes for slow rotation */
+@keyframes slow-rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.About-features-container { 
+    background: linear-gradient(90deg, rgba(17, 17, 17, 1) 39%, rgba(48, 48, 48, 1) 100%);
+    color: #fff;
+    padding: 100px 90px;
+    text-align: center;
+    border-radius: 15px;
+    max-width: 1600px;
+    height: 500px;
+    margin: 40px auto; /* Added top and bottom margin for spacing */
+    margin-bottom: 300px;
+  }
+  
+  .About-features-container h2 {
+    font-size: 1.9em; /* Increased font size for better visibility */
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    color: #00b7b1; /* Accent color for heading */
+  }
+  
+  .About-features-description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: start;
+    font-size: 1em; /* Slightly larger font for better readability */
+    margin: 0 auto 40px; /* Added bottom margin for spacing */
+    max-width: 800px;
+    color: #ccc; /* Lighter color for description text */
+  }
+  
+  .get-started-btn {
+    padding: 12px 24px;
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #1c1c1c;
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-bottom: 40px; /* Added bottom margin */
+    width: 20%;
+  }
+  
+  .get-started-btn:hover {
+    background: #00b7b1;
+    color: #fff; /* Ensure text color changes when hovered */
+  }
+  
+  .About-features-list {
+    display: grid; /* Change to grid for a more flexible layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns */
+    gap: 30px; /* Increased gap between items */
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .About-feature-box {
+    cursor: pointer;
+    background: #2a2a2a;
+    padding: 20px; /* Increased padding for better spacing inside boxes */
+    border-radius: 50px 10px 50px 0px;
+    width: 100%; /* Ensure boxes take full width of grid cell */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slow-rotate-box 5s infinite linear;
+    text-align: left;
+  }
+  
+  @keyframes slow-rotate-box {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+  .About-feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .About-feature-icon {
+    font-size: 2.5em; /* Increased icon size for better visibility */
+    color: #00b7b1;
+    margin-bottom: 15px; /* Increased margin for spacing */
+  }
+  
+  .About-feature-box h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.7em; /* Increased font size for headings */
+    font-weight: 700;
+    margin: 10px 0;
+    color: #fff; /* Ensure headings are white */
+  }
+  
+  .About-feature-box p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #bbb; /* Lighter color for paragraph text */
+    font-size: 1em; /* Increased font size for readability */
+    line-height: 1.6; /* Adjusted line-height for better spacing */
+  }
+  
+  .subscribe-section {
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0.346) 39%, rgba(48, 48, 48, 0.104) 100%);
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 100px;
+    border-radius: 200px 0px 200px 0px;
+  }
+  
+  .subscribe-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-description {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #666; /* Gray text color */
+    margin-bottom: 20px;
+  }
+  
+  .subscribe-input-container {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subscribe-input {
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  
+  .subscribe-button {
+    width: 10%;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #333; /* Darker hover effect */
+  }
+
+
+/* For Large Desktop Screens */
+@media only screen and (max-width: 1200px) {
+  .About-features-container {
+      padding: 80px 60px;
+  }
+  .About-features-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+  }
+  .get-started-btn {
+      width: 25%; /* Slightly wider for medium screens */
+      padding: 10px 20px;
+      font-size: 1em;
+  }
+  .about-stats {
+      grid-template-columns: repeat(2, 1fr); /* Adjusted to two columns */
+      gap: 30px;
+  }
+  .stat {
+      padding: 15px 30px;
+  }
+}
+
+/* For Tablets and Medium Screens */
+@media only screen and (max-width: 992px) {
+  .About-features-container {
+      padding: 60px 40px;
+  }
+  .About-features-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+  }
+  .get-started-btn {
+      width: 30%; /* Wider for better visibility */
+      padding: 8px 18px;
+      font-size: 0.95em;
+  }
+  .about-stats {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 20px;
+  }
+  .stat {
+      padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .About-features-list, .about-stats {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 15px;
+  }
+  .About-feature-box, .stat {
+      padding: 10px;
+      font-size: 0.9em;
+  }
+  .About-feature-box h3, .stat h4 {
+      font-size: 1.2em;
+  }
+  .about-page {
+    padding: 20px;
+}
+
+.about-intro{
+  align-items: center;
+}
+.about-intro h1 {
+    font-size: 1.6em;
+    text-align: center;
+}
+.about-intro h2 {
+    font-size: 1em;
+    text-align: center;
+}
+.about-content {
+    flex-direction: column; /* Ensure content stacks vertically */
+}
+.about-content p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+.about-image {
+    width: 350px;
+    margin-top: 15px; /* Add spacing above the image */
+}
+
+
+}
+@media only screen and (max-width: 480px) {
+  .About-feature-box, .stat {
+    padding: 5px 8px; /* Minimal padding */
+    font-size: 0.75em; /* Smaller font size */
+}
+.About-feature-box h3, .stat h4 {
+    font-size: 0.9em; /* Match heading size */
+}
+.About-feature-icon, .stat i {
+    font-size: 1.5em; /* Reduce icon size */
+}
+.About-feature-box {
+  text-align: center;
+  border-radius: 10px;
+  width: 90px;
+  height: 140px;
+}
+.About-features-container{
+  /* height: auto; */
+  text-align: center;
+  margin-bottom: 150px;
+}
+.About-features-list{
+  grid-template-columns: repeat(4 , 1fr);
+}
+  .About-feature-box p{
+    font-size: 0.55rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .About-feature-box h3{
+    margin: 0;
+    padding: 0;
+  }
+  .get-started-btn {
+    display: none;
+  }
+
+  .subscribe-section{
+    padding: 0;
+    border-radius: 100px 0px 50px 0px;
+  }
+  .subscribe-section h2{
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .subscribe-section P{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .subscribe-input{
+    width: 50%;
+  }
+  .subscribe-button{
+    width: 40%;
+  }
+}

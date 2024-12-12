@@ -1,0 +1,280 @@
+.how-it-works-container {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .full-work-container{
+    max-width: 1500px;
+    background-color: #dfe7f4;
+    height: 550px;
+    margin: auto;
+    border-radius: 0px 100px 0px 100px;
+  }
+  
+  .how-it-works-title {
+    font-size: 3rem;
+    font-weight: 800;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #0056b3;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .steps-container {
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .step-card {
+    width: 350px;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 20px;
+    border-top: 5px solid #0056b3; /* Default border color */
+    border-right: 5px solid #0056b3; /* Default border color */
+  }
+  
+  .step-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .step-card:hover .step-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .step-card-front,
+  .step-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background-color: #e6f0ff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  
+  .step-card-back {
+    transform: rotateY(180deg);
+    background-color: #dfe7f4;
+  }
+  
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  .step-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2a4e78;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Different border color for each card */
+  .card-1 {
+    border-top: 5px solid #ff6347; /* Tomato */
+    border-right: 5px solid #ff6347;
+  }
+  
+  .card-2 {
+    border-top: 5px solid #32cd32; /* Lime Green */
+    border-right: 5px solid #32cd32;
+  }
+  
+  .card-3 {
+    border-top: 5px solid #1e90ff; /* Dodger Blue */
+    border-right: 5px solid #1e90ff;
+  }
+  
+  /* Match the title color with the border color */
+  .card-1 .step-title,
+  .card-1 .step-number {
+    color: #ff6347;
+  }
+  
+  .card-2 .step-title,
+  .card-2 .step-number {
+    color: #32cd32;
+  }
+  
+  .card-3 .step-title,
+  .card-3 .step-number {
+    color: #1e90ff;
+  }
+  
+  .step-description {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .start-earning-button {
+    margin-top: 3em;
+    padding: 1rem 3rem;
+    background: linear-gradient(45deg, #ff6a00, #ff00d4, #4e00ff, #00aaff); /* Multi-color gradient */
+    background-size: 400% 400%; /* Larger gradient for smooth transitions */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-transform: uppercase; /* Make the text more impactful */
+  }
+  
+  /* Hover effect */
+  .start-earning-button:hover {
+    background-position: 100% 100%; /* Change the gradient position */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    animation: buttonHover 0.5s ease-in-out; /* Hover animation */
+  }
+  
+  /* Active click effect */
+  .start-earning-button:active {
+    transform: translateY(2px); /* Button pressed effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Focus effect */
+  .start-earning-button:focus {
+    outline: none;
+    border: 2px solid #00aaff; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.5); /* Glow effect */
+  }
+  
+  /* Animation for hover */
+  @keyframes buttonHover {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateCard {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .step-card-inner {
+    transform-style: preserve-3d;
+    animation: rotateCard 6s infinite ease-in-out;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .step-card:hover .step-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .steps-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .how-it-works-title {
+    font-size: 2rem;
+  }
+
+  .step-card {
+    max-width: 300px;
+  }
+
+  .start-earning-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-work-container {
+    height: 1150px;
+    background: none;
+  }
+  .steps-container {
+    flex-direction: column; /* Stack cards in one column */
+    align-items: center;
+  }
+
+  .step-card {
+    width: 100%; /* Full width */
+    max-width: 90%; /* Slight margin from edges */
+  }
+
+  .how-it-works-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .step-card {
+    max-width: 100%; /* Full width for very small screens */
+  }
+
+  .how-it-works-title {
+    font-size: 1.5rem;
+  }
+
+  .start-earning-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+

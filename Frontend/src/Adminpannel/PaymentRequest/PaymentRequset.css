@@ -1,0 +1,169 @@
+/* General Styling for Withdraw Requests */
+.withdraw-requests {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.withdraw-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--text-primary);
+  text-shadow: 1px 1px 2px var(--text-secondary);
+}
+
+/* Table Styling */
+.withdraw-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.withdraw-table th,
+.withdraw-table td {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.withdraw-table th {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  font-weight: bold;
+}
+
+.withdraw-table tr:nth-child(even) {
+  background-color: var(--row-even-bg);
+}
+
+.withdraw-table tr:nth-child(odd) {
+  background-color: var(--row-odd-bg);
+}
+
+.withdraw-table tr:hover {
+  background-color: var(--row-hover-bg);
+  transform: scale(1.01);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.withdraw-table td {
+  color: var(--text-secondary);
+}
+
+/* Delete Button Styling */
+.delete-button {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:hover {
+  transform: scale(1.1);
+  background: var(--btn-hover-bg);
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+/* Light Mode Colors */
+:root {
+  --text-primary: #333;
+  --text-secondary: #555;
+  --border-color: #ddd;
+  --header-bg: #f4f4f4;
+  --header-text: #000;
+  --row-even-bg: #fafafa;
+  --row-odd-bg: #ffffff;
+  --row-hover-bg: #e8f0fe;
+  --btn-bg: #e94e77;
+  --btn-text: #fff;
+  --btn-hover-bg: #c04060;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+  --text-primary: #f0f0f0;
+  --text-secondary: #c0c0c0;
+  --border-color: #444;
+  --header-bg: #2a2a2a;
+  --header-text: #fff;
+  --row-even-bg: #333;
+  --row-odd-bg: #2b2b2b;
+  --row-hover-bg: #3d3d3d;
+  --btn-bg: #4caf50;
+  --btn-text: #fff;
+  --btn-hover-bg: #388e3c;
+}
+
+/* Responsive Design */
+
+/* Mobile View (Max Width: 768px) */
+@media (max-width: 768px) {
+  .withdraw-title {
+    font-size: 20px;
+  }
+
+  .withdraw-table {
+    display: block;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .withdraw-table th,
+  .withdraw-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .delete-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* Laptop View (Min Width: 769px and Max Width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .withdraw-title {
+    font-size: 24px;
+  }
+
+  .withdraw-table th,
+  .withdraw-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .delete-button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mini-Laptop View (Min Width: 1025px and Max Width: 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .withdraw-title {
+    font-size: 26px;
+  }
+
+  .withdraw-table th,
+  .withdraw-table td {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .delete-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

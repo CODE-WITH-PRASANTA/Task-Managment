@@ -1,0 +1,205 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #003f5c;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1300px;
+    margin: auto;
+}
+
+.Logo {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Added shadow for 3D effect */
+}
+
+/* Get Started Button */
+.get-started {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Added 3D effect by lifting the button */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+/* Mobile Styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu li svg {
+    font-size: 1.5rem;
+}
+
+.nav-menu li:hover {
+    border-radius: 5px;
+    color: #ffcc00;
+    transform: translateY(-3px); /* Lift menu items on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* For open menu */
+.nav-menu.open {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #3498c6; /* Dark blue background */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0; /* Add vertical padding for spacing */
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+
+.nav-menu.open li {
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 30, 47, 0.9);
+        text-align: center;
+        gap: 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .get-started {
+        display: none;
+    }
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .get-started {
+        display: none;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-container {
+        width: 90%;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .Logo {
+        width: 130px;
+    }
+
+    .get-started {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Laptop View */
+@media (min-width: 1025px) {
+    .nav-container {
+        max-width: 1200px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+    }
+}

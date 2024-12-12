@@ -1,0 +1,303 @@
+.home-container {
+    border-radius: 0px 0px 400px 0px;
+    background-color: #003f5c;
+    padding: 50px;
+    color: #ffffff;
+  }
+  
+  .fullHome-content{
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .home-content {
+    max-width: 60%;
+  }
+  
+  .home-content h1 {
+    font-size: 4.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    background-image: linear-gradient(90deg, #50ff8b, #18ffe3);
+    -webkit-background-clip: text;  /* For Safari and Chrome */
+    background-clip: text;  /* For other browsers */
+    color: transparent;  /* Make the text color transparent to show the gradient */
+}
+
+  
+  .home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+.button-group {
+    display: flex;
+    flex-direction: column;  /* Stack buttons vertically */
+    gap: 1rem;
+  }
+  .start-earning {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    background-color: #00ffaa;
+    border: none;
+    padding: 15px 30px;  /* Increased padding for larger buttons */
+    font-size: 1.2rem;  /* Increased font size */
+    color: #003f5c;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40%;  /* Make button take full width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .start-earning:hover {
+    transform: scale(1.1);  /* Enlarge button on hover */
+    background-color: #00e6a3;  /* Darker shade of green */
+    box-shadow: 0 8px 16px rgba(0, 255, 170, 0.3);  /* Subtle shadow effect */
+  }
+  
+  .start-earning:active {
+    transform: scale(1);  /* Button returns to normal size when clicked */
+    box-shadow: 0 4px 8px rgba(0, 255, 170, 0.2);  /* Lighter shadow when active */
+  }
+  
+  .buyer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    background: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 15px 30px;  /* Increased padding for larger buttons */
+    font-size: 1.2rem;  /* Increased font size */
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40%;  /* Make button take full width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
+  .buyer:hover {
+    transform: scale(1.1);  /* Enlarge button on hover */
+    color: #00ffaa;  /* Change text color on hover */
+    border-color: #00ffaa;  /* Change border color on hover */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);  /* Subtle shadow effect */
+  }
+  
+  .buyer:active {
+    transform: scale(1);  /* Button returns to normal size when clicked */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);  /* Lighter shadow when active */
+  }
+  
+  .home-image img {
+    max-width: 90%; /* Adjust to fit better within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Adds a soft shadow for depth */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block; /* Center image within container */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .home-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    filter: brightness(1.1); /* Slight brightness increase for pop effect */
+  }
+  
+
+
+
+/* Responsive Media Query: Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .home-container{
+        border-radius: 0px 0px 0px 0px;
+    }
+    .fullHome-content {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center;
+    }
+  
+    .home-content {
+      max-width: 100%;
+    }
+  
+    .home-content h1 {
+      font-size: 3rem; /* Reduce font size for tablets */
+    }
+  
+    .home-content p {
+      font-size: 1rem; /* Adjust paragraph font size */
+    }
+  
+    .button-group button {
+      width: 70%; /* Buttons take more width */
+      margin: 0 auto; /* Center buttons */
+    }
+  }
+  
+  /* Responsive Media Query: Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .fullHome-content {
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .home-container{
+        padding: 20px;
+    }
+  
+    .home-content h1 {
+        margin-top: 50px;
+      font-size: 2.3rem; /* Further reduce font size */
+    }
+  
+    .home-content p {
+      font-size: 0.9rem; /* Smaller paragraph font */
+    }
+  
+    .button-group button {
+      width: 90%; /* Full-width buttons */
+    }
+  
+    .home-image img {
+       box-shadow: none;
+      max-width: 90%; /* Full width for mobile view */
+      margin-top: 20px; /* Space between image and content */
+    }
+  }
+  
+  /* Zoom-In View at 150% */
+  @media (min-width: 1025px) and (max-width: 1400px) {
+    body {
+      zoom: 150%; /* Zoom in for larger views */
+    }
+  }
+
+  
+  .subscribe-section {
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0.346) 39%, rgba(48, 48, 48, 0.104) 100%);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 200px 0px 200px 0px;
+  }
+  
+  .subscribe-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-description {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #666; /* Gray text color */
+    margin-bottom: 20px;
+  }
+  
+  .subscribe-input-container {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .subscribe-input {
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  
+  .subscribe-button {
+    width: 10%;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #333; /* Darker hover effect */
+  }
+
+
+  /* Responsive Media Query: Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .subscribe-section {
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 150px 0px 150px 0px; /* Adjusted for smaller devices */
+  }
+
+  .subscribe-title {
+    font-size: 24px; /* Smaller font size for title */
+  }
+
+  .subscribe-description {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .subscribe-input-container {
+    flex-direction: column; /* Stack input and button vertically */
+    gap: 10px; /* Space between input and button */
+  }
+
+  .subscribe-input {
+    width: 90%; /* Input takes most of the width */
+    border-radius: 30px; /* Full rounded corners */
+  }
+
+  .subscribe-button {
+    width: 50%; /* Button takes less width */
+    padding: 12px 20px; /* Adjust padding for smaller button */
+    border-radius: 30px; /* Fully rounded button */
+  }
+}
+
+/* Responsive Media Query: Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .subscribe-section {
+    padding: 20px;
+    border-radius: 100px 0px 100px 0px; /* Further reduce the border radius */
+  }
+
+  .subscribe-title {
+    font-size: 20px; /* Reduce font size for mobile screens */
+  }
+
+  .subscribe-description {
+    font-size: 12px; /* Smaller font for description */
+    margin-bottom: 15px; /* Reduce space below description */
+  }
+
+  .subscribe-input-container {
+    flex-direction: column; /* Keep input and button stacked */
+    align-items: stretch; /* Stretch to fit container */
+  }
+
+  .subscribe-input {
+    width: 70%; /* Input spans full width */
+    padding: 10px 15px; /* Smaller padding for mobile view */
+    font-size: 14px; /* Adjust font size for input */
+    margin: auto;
+  }
+
+  .subscribe-button {
+    width: 70%; /* Button spans full width */
+    padding: 10px 15px; /* Smaller padding for mobile */
+    font-size: 14px; /* Adjust font size for button */
+    margin: auto;
+  }
+}

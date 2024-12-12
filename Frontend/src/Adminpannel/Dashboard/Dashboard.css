@@ -1,0 +1,172 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light background for the full dashboard */
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-container,
+.task-list-container {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover,
+.task-list-container:hover {
+  transform: scale(1.02);
+  box-shadow: 12px 12px 20px #bebebe, -12px -12px 20px #ffffff;
+}
+
+h2 {
+  text-align: center;
+  color: #e94e77;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Form Styling */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: inset 4px 4px 8px #cccccc, inset -4px -4px 8px #ffffff;
+  border: 1px solid #e94e77;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(145deg, #e94e77, #c04060);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(145deg, #d43a65, #b32b52);
+  transform: scale(1.05);
+}
+
+/* Task List Styling */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.task-table th,
+.task-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-table th {
+  background-color: #e94e77;
+  color: white;
+  font-size: 1rem;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.delete-btn {
+  background: linear-gradient(145deg, #d43a65, #b32b52);
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Logout Button */
+.logout-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.logout-button button {
+  background: linear-gradient(145deg, #003cff, #002bb5);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.6);
+}
+
+.logout-button button:hover {
+  background: linear-gradient(145deg, #002bb5, #001d7e);
+  transform: scale(1.05);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
+
+.logout-button button:active {
+  transform: scale(0.95);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .form-container,
+  .task-list-container {
+      padding: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+}

@@ -1,0 +1,450 @@
+.user-view {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.sidebar {
+  margin-top: 50px;
+  width: 300px;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-right: 2px solid #ccc;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 50px; /* Collapsed width */
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sidebar-section {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800;
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.sidebar-section h3 {
+  margin: 0;
+  color: #333;
+}
+
+.sidebar-section.active h3 {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 100px;
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.balance-section {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.balance-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.withdraw-btn {
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.withdraw-btn:hover {
+  background-color: #005bb5;
+}
+
+.withdraw-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdraw-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.withdraw-form h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.withdraw-form label {
+  display: block;
+  margin: 15px 0 10px;
+  font-size: 16px;
+}
+
+.withdraw-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.withdraw-form button {
+  margin-right: 10px;
+  padding: 12px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.withdraw-form button:hover {
+  background-color: #005bb5;
+}
+/* Sidebar toggle icon styles */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-toggle img {
+  width: 30px; /* Adjust as per your image size */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon {
+  transform: rotate(90deg); /* Rotate the icon when sidebar is open */
+}
+
+.rotate-icon-reversed {
+  transform: rotate(0deg); /* Reset rotation when sidebar is closed */
+}
+
+.wallet-box,
+.deposit-box {
+  background-color: #ffffff; /* White background for clean look */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  padding: 20px; /* Inner spacing */
+  margin-bottom: 20px; /* Space between sections */
+  text-align: center; /* Center-align content */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.wallet-box:hover,
+.deposit-box:hover {
+  transform: translateY(-5px); /* Lift up on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.wallet-box h3,
+.deposit-box h3 {
+  font-size: 20px; /* Adjust font size */
+  color: #0073e6; /* Highlighted heading color */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.wallet-box p,
+.deposit-box p {
+  font-size: 24px; /* Larger font for balance amounts */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Emphasize balance text */
+  margin: 0; /* Remove default margin */
+}
+
+.logout-btn {
+  background-color: #ff4d4f; /* Red color for a warning/logout action */
+  color: #ffffff; /* White text for contrast */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Smooth rounded corners */
+  padding: 12px 20px; /* Spacing for the button */
+  font-size: 16px; /* Readable font size */
+  font-weight: bold; /* Emphasize the button text */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  width:70%; /* Full width for better visibility */
+  margin-top: 20px; /* Add spacing above the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+}
+
+.logout-btn:hover {
+  background-color: #d9363e; /* Slightly darker red for hover effect */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+.logout-btn:active {
+  background-color: #b92a30; /* Even darker red for click effect */
+  transform: translateY(0); /* Reset lift on click */
+}
+/* General Styles */
+.user-view {
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.sidebar {
+  margin-top: 50px;
+  width: 300px;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-right: 2px solid #ccc;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sidebar-section {
+  padding: 20px 0;
+  cursor: pointer;
+  border: 5px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.sidebar-section:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-5px);
+}
+
+.sidebar-section h3 {
+  margin: 0;
+  color: #333;
+}
+
+.sidebar-section.active h3 {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 100px;
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .user-view {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+    margin-top: 60px;
+    height: 93.2vh;
+  }
+
+  .content {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .sidebar-section {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
+  }
+
+  .wallet-box,
+  .deposit-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .wallet-box h3{
+    margin-top: 50px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user-view {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+
+  .sidebar-section {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  .wallet-box,
+  .deposit-box {
+    padding: 20px;
+  }
+
+  .content {
+    margin-top: 50px;
+    padding: 30px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+  .user-view {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .sidebar-section {
+    padding: 20px;
+  }
+
+  .content {
+    margin-top: 50px;
+    padding: 40px;
+  }
+
+  .logout-btn {
+    width: 70%;
+    margin-top: 20px;
+  }
+}
+
+/* Box styling for clickable sections */
+.wallet-box,
+.deposit-box {
+  background-color: #ffffff;
+  border: 5px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wallet-box:hover,
+.deposit-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-box h3,
+.deposit-box h3 {
+  font-size: 20px;
+  color: #0073e6;
+  margin-bottom: 10px;
+}
+
+.wallet-box p,
+.deposit-box p {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+.logout-btn {
+  background-color: #ff4d4f; /* Red color for a warning/logout action */
+  color: #ffffff; /* White text for contrast */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Smooth rounded corners */
+  padding: 12px 20px; /* Spacing for the button */
+  font-size: 16px; /* Readable font size */
+  font-weight: bold; /* Emphasize the button text */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  width: 70%; /* Full width for better visibility */
+  margin-top: 20px; /* Add spacing above the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover, click, and shadow transitions */
+}
+
+.logout-btn:hover {
+  background-color: #d9363e; /* Slightly darker red for hover effect */
+  transform: translateY(-3px); /* Lift the button slightly on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.logout-btn:active {
+  background-color: #b92a30; /* Even darker red for click effect */
+  transform: translateY(0); /* Reset lift on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}
+
+.logout-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Blue glow effect on focus */
+}
+
+

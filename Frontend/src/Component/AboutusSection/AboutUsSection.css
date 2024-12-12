@@ -1,0 +1,264 @@
+
+/* about-sec section */
+.about-sec-section {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 20px;
+  background-color: #e0e0e0;
+  border-radius: 400px 0px 400px 0px;
+}
+
+.about-sec-container {
+  max-width: 1050px;
+  padding: 50px 20px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.about-sec-container h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.5em;
+}
+
+.about-sec-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.about-sec-mission {
+  color: #6c757d;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.about-sec-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.about-sec-text {
+  max-width: 600px;
+  flex: 1;
+  line-height: 1.6;
+  margin-right: 20px;
+}
+
+.about-sec-text p {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.skills-section {
+  margin-top: 30px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  perspective: 1000px;
+}
+
+.bar {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.bar canvas {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: linear-gradient(135deg, #7e57c2, #512da8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: rotate3D 2s infinite linear;
+}
+
+@keyframes rotate3D {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.box span {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-sec-image {
+  flex: 1;
+  max-width: 300px;
+  position: relative;
+  margin-left: -20px;
+  text-align: center;
+  animation: float3D 6s ease-in-out infinite;
+}
+
+.about-sec-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform-origin: center;
+}
+
+@keyframes float3D {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(10deg) scale(1.05);
+  }
+}
+
+.fl-about-sec-img-content {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+  border-radius: 0px 100px 100px 0;
+  padding: 20px;
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  text-align: center;
+}
+
+.fl-about-sec-img-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.fl-about-sec-img-content p {
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .about-sec-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .about-sec-text {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .about-sec-image {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .fl-about-sec-img-content {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-sec-section {
+    border-radius: 200px 0px 200px 0px;
+  }
+
+  .about-sec-container {
+    max-width: 100%;
+  }
+
+  .about-sec-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-sec-image {
+    order: -1; /* Move the image to the top */
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 190px;
+  }
+
+  .skills-section {
+    margin-top: 20px; /* Add spacing between the image and skills section */
+  }
+
+  .fl-about-sec-img-content {
+    width: 110%;
+    padding: 10px;
+    top: -20px;
+    margin-right: 50px;
+    border-radius: 0px 100px 100px 0;
+  }
+
+  .about-sec-container h2 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .about-sec-title {
+    font-size: 28px;
+  }
+
+  .about-sec-mission {
+    font-size: 14px;
+  }
+.about-sec-text h3{
+  margin-top: 10px;
+}
+  .about-sec-text p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .box span {
+    font-size: 14px;
+  }
+
+  .fl-about-sec-img-content h4 {
+    font-size: 16px;
+  }
+
+  .fl-about-sec-img-content p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,420 @@
+/* Main container */
+.withdraw-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section: Withdraw Money */
+.withdraw-section,
+.history-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-section {
+  background: #fafafa;
+}
+
+/* Form styling */
+form .withdraw-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px dashed #e0e0e0;
+}
+
+form label {
+  flex: 0 0 150px;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Input fields */
+.withdraw-form-group input[type="text"],
+.withdraw-form-group input[type="number"] {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.withdraw-form-group input[type="text"]:focus,
+.withdraw-form-group input[type="number"]:focus {
+  border: 1px solid #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-group input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4caf50;
+}
+
+.radio-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Banking and UPI form sections */
+.banking-form,
+.upi-form {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.banking-form h3,
+.upi-form h3 {
+  color: #4caf50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banking-form .withdraw-form-group,
+.upi-form .withdraw-form-group {
+  margin-bottom: 15px;
+}
+
+.save-button {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.withdraw-button {
+  padding: 12px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.withdraw-button:hover {
+  background-color: #f57c00;
+}
+
+/* Transaction History Table */
+.history-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.history-section th,
+.history-section td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.history-section th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.history-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.history-section tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Mobile, Tablet, and Mini Laptop View */
+@media (max-width: 1024px) {
+  .withdraw-container{
+    background: none;
+    box-shadow: none;
+  }
+  .wallet-box{
+    margin-left: 20px;
+    border: none;
+  }
+  .withdraw-form-group label {
+    flex: 0 0 auto; /* Disable flex property */
+    margin-bottom: 5px;
+  }
+  .withdraw-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .withdraw-section,
+  .history-section {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .withdraw-form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form label {
+    flex: 0px 0px 0px ;
+    margin-bottom: 5px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .save-button,
+  .withdraw-button {
+    width: 100%;
+  }
+  .withdraw-form-group label{
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .withdraw-container{
+    background: none;
+    box-shadow: none;
+  }
+  .wallet-box{
+    margin-left: 20px;
+    border: none;
+  }
+  .withdraw-form-group label {
+    flex: 0 0 auto; /* Disable flex property */
+    margin-bottom: 5px;
+  }
+  .withdraw-container {
+    padding: 5px;
+  }
+
+  form label {
+    flex: 0px 0px 0px ;
+    font-size: 14px;
+  }
+
+  .withdraw-form-group input[type="text"],
+  .withdraw-form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .withdraw-button {
+    font-size: 16px;
+  }
+
+  .history-section table th,
+  .history-section table td {
+    font-size: 12px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
+.withdraw-form-group label{
+  margin-bottom: 0px;
+}
+
+@media (max-width: 480px) {
+  .withdraw-container{
+    background: none;
+    box-shadow: none;
+  }
+  .wallet-box{
+    margin-left: 20px;
+    border: none;
+  }
+  .withdraw-form-group label {
+    flex: 0 0 auto; /* Disable flex property */
+    margin-bottom: 5px;
+  }
+  .withdraw-container {
+    padding: 5px;
+  }
+
+  .withdraw-section,
+  .history-section {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .withdraw-form-group {
+    margin-bottom: 10px;
+  }
+
+  .withdraw-form-group input[type="text"],
+  .withdraw-form-group input[type="number"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .save-button,
+  .withdraw-button {
+    padding: 14px 20px;
+  }
+
+  .history-section table th,
+  .history-section table td {
+    font-size: 12px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .history-section th {
+    font-size: 12px;
+  }
+  .withdraw-form-group label{
+    margin-bottom: 20px;
+  }
+  .form label{
+    flex: 0px ;
+  }
+}
+
+/* Transaction History Table - Responsive Adjustments */
+@media (max-width: 1024px) {
+  .history-section table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .history-section th, 
+  .history-section td {
+    font-size: 14px;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .history-section th {
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+  }
+
+  .history-section tr {
+    display: table-row;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-section {
+    overflow-x: auto;
+  }
+
+  .history-section table {
+    display: block;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .history-section th,
+  .history-section td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .history-section th {
+    font-size: 14px;
+  }
+
+  .history-section tr {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .history-section td,
+  .history-section th {
+    flex: 1;
+    min-width: 100px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-section table {
+    border: 0;
+    width: 100%;
+  }
+
+  .history-section tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .history-section th {
+    display: none;
+  }
+
+  .history-section td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+  }
+
+  .history-section td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 50%;
+    text-align: left;
+  }
+
+  .history-section td:last-child {
+    border-bottom: none;
+  }
+}

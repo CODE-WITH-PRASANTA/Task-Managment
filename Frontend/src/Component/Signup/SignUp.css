@@ -1,0 +1,181 @@
+/* Container Styling */
+.Signup-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../../assets/SignInBg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+  }
+  
+  /* Form Box Styling */
+  .Signup-Form {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    /* Permanent 3D box-shadow */
+    box-shadow: 
+        0px 15px 25px rgba(0, 0, 0, 0.2),  /* Strong lower shadow */
+        0px 10px 35px rgba(0, 0, 0, 0.25), /* Secondary shadow for more depth */
+        inset 0px 5px 10px rgba(255, 255, 255, 0.6); /* Inner glow for subtle elevation */
+}
+
+
+  .Signup-Form h3{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Logo Styling */
+  .SignUp-Logo {
+    width: 250px;
+  }
+  
+  /* Title Styling */
+  .tittle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+ /* Input Field Styling */
+.Sign-Content {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.Form-Control {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+/* Input Field Hover Effect */
+.Form-Control:hover {
+  border-color: #4CAF50;
+  box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.6);
+  transform: scale(1.02);
+}
+
+/* Focus Effect for Better UX */
+.Form-Control:focus {
+  border-color: #2196F3;
+  box-shadow: 0px 0px 12px rgba(33, 150, 243, 0.7);
+  transform: scale(1.03);
+}
+
+
+  
+  /* Button Styling */
+  .Signup-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .Signup-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer Buttons */
+  .form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: #ccc;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #bbb;
+  }
+  
+  /* Responsive Media Queries */
+  
+  /* Mobile View (up to 480px) */
+  @media (max-width: 480px) {
+    .Signup-Container{
+      background: url(../../assets/mobile-signin-bg.png);
+    }
+    .Signup-Form {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .Form-Control {
+      font-size: 14px;
+    }
+  
+    .Signup-button {
+      font-size: 16px;
+    }
+  }
+  
+  /* Tablet View (up to 786px) */
+  @media (max-width: 786px) {
+    .Signup-Form {
+      padding: 30px;
+    }
+  
+    .tittle {
+      font-size: 22px;
+    }
+  
+    .Form-Control {
+      font-size: 15px;
+    }
+  }
+  
+
+  /* Password Field Wrapper */
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px; /* Position near the right edge */
+    cursor: pointer;
+    font-size: 20px; /* Adjust font size for better visibility */
+    color: #888; /* Subtle color for the icon */
+    user-select: none; /* Prevent text selection on click */
+    padding: 5px; /* Small padding for touch-friendly size */
+    transition: color 0.3s ease, transform 0.2s;
+  }
+  
+  .toggle-password:hover {
+    color: #2196F3; /* Highlight color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+  }
+  

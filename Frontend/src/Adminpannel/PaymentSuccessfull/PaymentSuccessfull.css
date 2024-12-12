@@ -1,0 +1,153 @@
+/* General Container Styling */
+.payment-success-container {
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), inset 0px -2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Title Styling */
+.payment-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Table Styling */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.payment-table th {
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 15px;
+  font-size: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Data Cell Styling */
+.payment-table td {
+  padding: 12px 15px;
+  font-size: 14px;
+  background: linear-gradient(145deg, #f7f7f7, #eaeaea);
+  color: #444;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effects */
+.payment-table tr:hover td {
+  background: linear-gradient(145deg, #e0f7fa, #b2ebf2);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #0056b3;
+}
+
+/* Serial Number Highlight */
+.payment-table td:first-child {
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Alternate Row Coloring */
+.payment-table tr:nth-child(even) td {
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .payment-success-container {
+  background: linear-gradient(145deg, #2c2c2c, #1c1c1c);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4), inset 0px -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .payment-title {
+  color: #ddd;
+}
+
+body.dark-mode .payment-table th {
+  background: linear-gradient(145deg, #444, #333);
+  color: #ddd;
+}
+
+body.dark-mode .payment-table td {
+  background: linear-gradient(145deg, #2e2e2e, #1e1e1e);
+  color: #bbb;
+}
+
+body.dark-mode .payment-table tr:hover td {
+  background: linear-gradient(145deg, #455a64, #37474f);
+  color: #81d4fa;
+}
+
+/* Responsive Design */
+
+/* Mobile View (Max Width: 768px) */
+@media (max-width: 768px) {
+  .payment-success-container {
+    padding: 15px;
+  }
+
+  .payment-title {
+    font-size: 22px;
+  }
+
+  .payment-table {
+    display: block;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .payment-table th, .payment-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Laptop View (Min Width: 769px and Max Width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .payment-success-container {
+    padding: 25px;
+  }
+
+  .payment-title {
+    font-size: 24px;
+  }
+
+  .payment-table th, .payment-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Mini-Desktop View (Min Width: 1025px and Max Width: 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .payment-success-container {
+    padding: 30px;
+  }
+
+  .payment-title {
+    font-size: 26px;
+  }
+
+  .payment-table th, .payment-table td {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

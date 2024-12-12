@@ -1,0 +1,367 @@
+.Vip5-display {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: #f0f4f8; /* Set a light background color for the entire VIP section */
+  }
+  
+  .Vip5-display h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #f74141;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+  
+  .Vip5-display .task-list {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    width: 80%;
+    background: #ffffff; /* Background color for task container */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-item {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Vibrant gradient colors */
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 -3px 8px rgba(255, 255, 255, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .task-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    opacity: 0.8;
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  .task-item:hover {
+    transform: rotateX(-10deg) rotateY(10deg) translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  }
+  
+  .video-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .task-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .task-details {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .task-item h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    background-color: #007bff; /* Button-like background */
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .task-item h3:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .task-item h3:active {
+    background-color: #004085;
+    transform: scale(0.95);
+  }
+  
+  .task-item p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  
+  .whatsapp-button {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .whatsapp-button a button {
+    background-color: #25d366;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 -3px 5px rgba(255, 255, 255, 0.4);
+  }
+  
+  .whatsapp-button a button:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  .whatsapp-button a button:active {
+    transform: translateY(1px);
+  }
+  
+  .age-verification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e94e77, #007bff);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    border-radius: 100px;
+  }
+  
+  .verification-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .verification-box h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .verification-box p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .verification-box input[type='number'] {
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background: #f7f7f7;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .verification-box input[type='number']:focus {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    outline: none;
+  }
+  
+  .verification-box button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  .verification-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #004095);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .verification-box button:active {
+    transform: translateY(1px);
+  }
+  
+  .icon {
+    margin-bottom: 25px;
+    color: #007bff;
+  }
+  
+  .inline-icon {
+    color: #e94e77;
+    margin-right: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .task-list {
+      width: 90%;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .task-item {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .task-item h3 {
+      font-size: 16px;
+      padding: 8px 15px;
+    }
+  
+    .whatsapp-button {
+      width: 100%;
+    }
+  
+    .whatsapp-button a button {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+  /* Task Button Styling */
+  .task-button {
+    background-color: #28a745; /* Green background for the button */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    text-align: center;
+    margin-top: 20px;
+    width: 100%; /* Ensures the button takes full width */
+    max-width: 200px; /* Limits the width of the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover Effect */
+  .task-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  }
+  
+  /* Active Effect */
+  .task-button:active {
+    background-color: #1e7e34; /* Dark green on click */
+    transform: scale(0.98); /* Shrinks the button slightly when clicked */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); /* Lighter shadow on click */
+  }
+  
+  /* Disabled Button */
+  .task-button:disabled {
+    background-color: #6c757d; /* Gray background when disabled */
+    cursor: not-allowed; /* Shows not-allowed cursor */
+    transform: none; /* No transformation on disabled state */
+    box-shadow: none; /* No shadow when disabled */
+  }
+  
+  .task-item {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background for task item */
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  }
+  
+  .task-item h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .task-item h3:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .task-item .task-button {
+    background-color: #007bff; /* Blue color for the task button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 100%; /* Full width for the button */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .task-item .task-button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-item .task-button:active {
+    background-color: #004085; /* Dark blue when clicked */
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .task-item .task-button:disabled {
+    background-color: #6c757d; /* Disabled state color */
+    cursor: not-allowed; /* Shows not-allowed cursor */
+  }
+  
+  
