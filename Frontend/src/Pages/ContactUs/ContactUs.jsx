@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contactus.css';
+import './ContactUs.css';
 import sendarrow from '../../assets/send-arrow.png'
 
 const ContactUs = () => {
