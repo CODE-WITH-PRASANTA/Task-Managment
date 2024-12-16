@@ -12,7 +12,6 @@ const accountDetailsRoute = require('./Routes/accountDetails');
 const withdrawRoutes = require('./Routes/withdrawRoutes');
 const paymentRoutes = require('./Routes/paymentRoutes');
 
-
 dotenv.config();
 const app = express();
 
@@ -22,6 +21,11 @@ app.use(express.json());
 
 // Connect to the database
 connectDB();
+
+// Define a simple route for the root path
+app.get('/', (req, res) => {
+  res.send('Server is up and running!');
+});
 
 // Import routes
 const authRoutes = require('./Routes/authRoutes'); // Ensure the path is correct
@@ -35,12 +39,10 @@ app.use('/api/vip5', vip5Routes);
 app.use('/api/vip6', vip6Routes);
 app.use('/api', withdrawRoutes);
 
-
 // Use routes
 app.use('/api/auth', authRoutes); // Define a base path for auth routes
 app.use('/api/payments', paymentRoutes);
 app.use('/api/account-details', accountDetailsRoute);
-
 
 app.delete('/api/withdraw/:id', async (req, res) => {
   const { id } = req.params;
