@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaUserShield, FaExclamationTriangle } from 'react-icons/fa'; // Importing React icons
-import './Vip5Display.CSS';
+import './Vip5Display.css';
 
 const Vip5display = () => {
   const [tasks, setTasks] = useState([]);
