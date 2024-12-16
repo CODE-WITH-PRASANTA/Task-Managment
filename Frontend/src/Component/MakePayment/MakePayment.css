@@ -116,6 +116,33 @@
   .submit-button:hover {
     background-color: #218838;
   }
+  .whatsapp-notice {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .warning-text {
+    color: #721c24;
+    font-size: 16px;
+  }
+  
+  .whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128c7e;
+  }
   
 
   @media screen and (max-width: 1024px) {

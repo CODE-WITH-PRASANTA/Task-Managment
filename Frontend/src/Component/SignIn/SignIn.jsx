@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import './SignIn.css';
-import Logo from '../../assets/companylogo-red.svg';
+import Logo from '../../assets/Bajaj1.png';
 
 const SignIn = () => {
   const [mobileNumber, setMobileNumber] = useState('');

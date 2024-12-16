@@ -21,7 +21,7 @@ const Home = () => {
             <h1>
               A reliable service for <span className="highlight">remote work</span>
             </h1>
-            <p>Thousands of Tasks every day – Bajaj Financely has work for anyone</p>
+            <p>Thousands of Tasks every day – Bajaj Money has work for anyone</p>
             <div className="button-group">
               <button className="start-earning" onClick={handleNavigation}>
                 Start earning Free

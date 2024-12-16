@@ -78,6 +78,13 @@ const MakePayment = () => {
     link.click();
   };
 
+  const sendWhatsAppMessage = () => {
+    const message = "I have completed a payment, here's the screenshot.";
+    const phoneNumber = "919xxxxxxxxx"; // Replace with your WhatsApp number
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="payment-container">
       <div className="main-container">
@@ -185,6 +192,15 @@ const MakePayment = () => {
               </button>
             </div>
           </form>
+        </div>
+
+        <div className="whatsapp-notice">
+          <p className="warning-text">
+            <strong>Warning:</strong> Please send your payment screenshot to us on WhatsApp for verification.
+          </p>
+          <button className="whatsapp-button" onClick={sendWhatsAppMessage}>
+            Send on WhatsApp
+          </button>
         </div>
       </div>
     </div>

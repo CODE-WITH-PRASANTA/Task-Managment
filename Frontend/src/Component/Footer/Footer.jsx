@@ -77,7 +77,7 @@ const Footer = () => {
           <span>2024 Bajaj Money - All Rights Reserved</span>
         </div>
         <div className="credits">
-          <span>Designed by Developer (Prasanta)</span>
+          <span>Devlopedd By : (Prasanta) & Designed By : *BishnuPriya*</span>
         </div>
       </div>
 

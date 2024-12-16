@@ -21,7 +21,7 @@
 }
 
 .Logo {
-    width: 150px;
+    width: 180px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -151,7 +151,7 @@
 
 
 /* Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 768px)  {
     .nav-menu {
         display: none;
     }
@@ -174,9 +174,9 @@
 }
 
 /* Tablet View */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) and  (max-width: 1400px){
     .nav-container {
-        width: 90%;
+        width: 80%;
     }
 
     .nav-menu {
