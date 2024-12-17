@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './WithdrawForm.css';
+import config from '../../config'; // Import config.js
 
 const WithdrawForm = () => {
   const [selectedMethod, setSelectedMethod] = useState('');
@@ -47,7 +48,7 @@ const WithdrawForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/withdraw', {
+      const response = await fetch(`${config.baseUrl}api/withdraw`, { // Use the base URL from config.js
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(withdrawData),
@@ -73,6 +74,7 @@ const WithdrawForm = () => {
       alert('An error occurred while submitting the request.');
     }
   };
+
   return (
     <div className="withdraw-container">
       {/* Left Section: Withdraw Money */}
@@ -193,17 +195,16 @@ const WithdrawForm = () => {
             </tr>
           </thead>
           <tbody>
-          {transactions.map((transaction, index) => (
-            <tr key={index}>
-              <td data-label="Phone Number">{transaction.phoneNumber}</td>
-              <td data-label="Amount">{transaction.amount}</td>
-              <td data-label="Method">{transaction.method}</td>
-              <td data-label="Status">{transaction.status}</td>
-              <td data-label="Date & Time">{transaction.dateTime}</td>
-            </tr>
-          ))}
-        </tbody>
-
+            {transactions.map((transaction, index) => (
+              <tr key={index}>
+                <td data-label="Phone Number">{transaction.phoneNumber}</td>
+                <td data-label="Amount">{transaction.amount}</td>
+                <td data-label="Method">{transaction.method}</td>
+                <td data-label="Status">{transaction.status}</td>
+                <td data-label="Date & Time">{transaction.dateTime}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

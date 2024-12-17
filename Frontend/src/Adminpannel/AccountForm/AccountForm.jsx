@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../../config'; // Import the config file
 import './AccountForm.css';
 
 const AccountForm = () => {
@@ -9,10 +10,11 @@ const AccountForm = () => {
     upiHandle: '',
   });
 
+  // Fetch account details when the component mounts
   useEffect(() => {
     const fetchAccountDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/account-details/');
+        const response = await axios.get(`${config.baseUrl}api/account-details/`);
         if (response.data) {
           setFormData(response.data);
         }
@@ -23,14 +25,19 @@ const AccountForm = () => {
     fetchAccountDetails();
   }, []);
 
+  // Handle form field changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/account-details/update', formData);
+      const response = await axios.post(
+        `${config.baseUrl}api/account-details/update`,
+        formData
+      );
       alert(response.data.message);
     } catch (error) {
       console.error('Error updating account details:', error);

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import config from '../../config';  // Import the config file
 import './PaymentRequset.css';
 
 const PaymentRequest = () => {
@@ -7,7 +8,7 @@ const PaymentRequest = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/withdraw');
+        const response = await fetch(`${config.baseUrl}api/withdraw`);
         const data = await response.json();
         setRequests(data);
       } catch (error) {
@@ -20,7 +21,7 @@ const PaymentRequest = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/withdraw/${id}`, {
+      const response = await fetch(`${config.baseUrl}api/withdraw/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

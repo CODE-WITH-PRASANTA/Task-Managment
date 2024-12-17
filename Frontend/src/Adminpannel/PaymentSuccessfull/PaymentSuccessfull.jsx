@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import config from '../../config';  // Import the config file
 import './PaymentSuccessfull.css';
 
 const PaymentSuccessfull = () => {
@@ -8,7 +9,7 @@ const PaymentSuccessfull = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/payments/all');
+        const response = await axios.get(`${config.baseUrl}api/payments/all`);
         setPaymentData(response.data.payments);
       } catch (error) {
         console.error('Error fetching payments:', error);

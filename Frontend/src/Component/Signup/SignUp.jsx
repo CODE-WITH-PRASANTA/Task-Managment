@@ -3,6 +3,7 @@ import Logo from '../../assets/Bajaj1.png';
 import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';  // Import axios
+import config from '../../config'; // Import config
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -25,11 +26,16 @@ const SignUp = () => {
           setError('Please enter a valid email address');
           return;
         }
+
+        if (password !== confirmPassword) {
+          setError('Passwords do not match');
+          return;
+        }
       
         setError('');  // Clear any previous error
       
         try {
-          const response = await axios.post('http://localhost:5000/api/auth/signup', {
+          const response = await axios.post(`${config.baseUrl}api/auth/signup`, {
             email,
             phoneNumber,
             password
@@ -41,8 +47,6 @@ const SignUp = () => {
           setError(err.response?.data?.message || 'Signup failed');
         }
     };
-
-      
 
     const handleLoginPass = () => navigate('/signin');
 

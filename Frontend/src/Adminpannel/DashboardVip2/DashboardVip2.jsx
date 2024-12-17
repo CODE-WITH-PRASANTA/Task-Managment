@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import config from '../../config'; // Import the config file
 import './DashboardVip2.css';
 
-const Dashboard = () => {
+const DashboardVip2 = () => {
   const [formData, setFormData] = useState({
     url: '',
     taskName: '',
@@ -11,15 +12,20 @@ const Dashboard = () => {
   });
 
   const [taskList, setTaskList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTasks = async () => {
+      setLoading(true);
       try {
-        const response = await axios.get('http://localhost:5000/api/vip2');
+        const response = await axios.get(`${config.baseUrl}api/vip2`);
         setTaskList(response.data);
-      } catch (error) {
-        console.error('Error fetching tasks:', error);
+      } catch (err) {
+        setError('Failed to fetch tasks.');
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -39,7 +45,8 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/vip2/add', {
+      setLoading(true);
+      const response = await axios.post(`${config.baseUrl}api/vip2/add`, {
         fileUrl: formData.url,
         title: formData.taskName,
         description: formData.taskDescription,
@@ -47,17 +54,18 @@ const Dashboard = () => {
       setTaskList([...taskList, response.data]);
       setFormData({ url: '', taskName: '', taskDescription: '' });
     } catch (error) {
-      console.error('Error adding task:', error);
+      setError('Failed to add task.');
+    } finally {
+      setLoading(false);
     }
   };
-  
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/vip2/${id}`);
+      await axios.delete(`${config.baseUrl}api/vip2/${id}`);
       setTaskList(taskList.filter((task) => task._id !== id));
     } catch (error) {
-      console.error('Error deleting task:', error);
+      setError('Failed to delete task.');
     }
   };
 
@@ -129,32 +137,38 @@ const Dashboard = () => {
         {/* Task List Section */}
         <div className="task-list-container">
           <h2>Task List</h2>
-          <table className="task-table">
-            <thead>
-              <tr>
-                <th>Uploaded URL</th>
-                <th>Task Name</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {taskList.map((task) => (
-                <tr key={task._id}>
-                  <td>{task.fileUrl}</td>
-                  <td>{task.title}</td>
-                  <td>
-                    <button onClick={() => handleDelete(task._id)} className="delete-btn">
-                      Delete
-                    </button>
-                  </td>
+          {loading ? (
+            <p>Loading tasks...</p>
+          ) : error ? (
+            <p className="error">{error}</p>
+          ) : (
+            <table className="task-table">
+              <thead>
+                <tr>
+                  <th>Uploaded URL</th>
+                  <th>Task Name</th>
+                  <th>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {taskList.map((task) => (
+                  <tr key={task._id}>
+                    <td>{task.fileUrl}</td>
+                    <td>{task.title}</td>
+                    <td>
+                      <button onClick={() => handleDelete(task._id)} className="delete-btn">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
-      </div>''
+      </div>
     </>
   );
 };
 
-export default Dashboard;
+export default DashboardVip2;

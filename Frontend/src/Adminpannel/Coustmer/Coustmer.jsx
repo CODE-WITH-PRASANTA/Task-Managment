@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Coustmer.css';
+import config from '../../config'; // Import the configuration
 
 // Import VIP Display Components
 import VipDisplay1 from '../../Component/Vip1Dsiplay/Vip1display';
@@ -13,31 +14,32 @@ import VipDisplay6 from '../../Component/Vip6Display/Vip6Display';
 const Customer = () => {
   const [customers, setCustomers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeVipSection, setActiveVipSection] = useState(null); // State for active VIP section
+  const [activeVipSection, setActiveVipSection] = useState(null);
 
-  // Fetch customer data from the server
+  const apiUrl = `${config.baseUrl}api/auth`;
+
+  // Fetch customer data
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/customers');
+        const response = await axios.get(`${apiUrl}/customers`);
         setCustomers(response.data);
       } catch (error) {
         console.error('Error fetching customers:', error);
       } finally {
-        setIsLoading(false); // Set loading to false when data is fetched
+        setIsLoading(false);
       }
     };
 
     fetchCustomers();
-  }, []);
+  }, [apiUrl]);
 
-  // Save the updated wallet balance and VIP access to the backend
   const handleSubmit = async (customerId, updatedWallet, updatedVipAccess) => {
     try {
-      await axios.put('http://localhost:5000/api/auth/update-customer', {
-        phoneNumber: customerId, // Using customer ID as phone number
-        wallet: updatedWallet, // Updated wallet balance
-        vipAccess: updatedVipAccess, // Updated VIP access
+      await axios.put(`${apiUrl}/update-customer`, {
+        phoneNumber: customerId,
+        wallet: updatedWallet,
+        vipAccess: updatedVipAccess,
       });
       alert('Customer updated successfully!');
       setCustomers((prevCustomers) =>
@@ -53,7 +55,6 @@ const Customer = () => {
     }
   };
 
-  // Handle VIP Section Rendering
   const renderVipSection = () => {
     switch (activeVipSection) {
       case 'vip1':
@@ -74,7 +75,7 @@ const Customer = () => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>; // Show loading spinner or message
+    return <div>Loading...</div>;
   }
 
   return (
@@ -134,7 +135,6 @@ const Customer = () => {
                   <option value="vip5">VIP 5</option>
                   <option value="vip6">VIP 6</option>
                 </select>
-                {/* Add button to view VIP details */}
                 <button
                   onClick={() => setActiveVipSection(customer.vipAccess[0])}
                   className="view-vip-btn"
@@ -161,10 +161,7 @@ const Customer = () => {
         </tbody>
       </table>
 
-      {/* Render VIP Section */}
-      <div className="vip-display">
-        {renderVipSection()}
-      </div>
+      <div className="vip-display">{renderVipSection()}</div>
     </div>
   );
 };

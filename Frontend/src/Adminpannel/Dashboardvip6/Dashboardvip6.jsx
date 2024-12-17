@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import config from '../../config'; // Import the config file
 
 const Dashboardvip6 = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const Dashboardvip6 = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/vip6');
+        const response = await axios.get(`${config.baseUrl}api/vip6`);
         setTaskList(response.data);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -39,7 +39,7 @@ const Dashboardvip6 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/vip6/add', {
+      const response = await axios.post(`${config.baseUrl}api/vip6/add`, {
         fileUrl: formData.url,
         title: formData.taskName,
         description: formData.taskDescription,
@@ -50,11 +50,10 @@ const Dashboardvip6 = () => {
       console.error('Error adding task:', error);
     }
   };
-  
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/vip6/${id}`);
+      await axios.delete(`${config.baseUrl}api/vip6/${id}`);
       setTaskList(taskList.filter((task) => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -152,7 +151,7 @@ const Dashboardvip6 = () => {
             </tbody>
           </table>
         </div>
-      </div>''
+      </div>
     </>
   );
 };

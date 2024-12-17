@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import config from '../../config'; // Import the config file
 import './Dashboard.css';
 import DashboardVip2 from '../DashboardVip2/DashboardVip2';
 import Dashboardvip3 from '../Dashboardvip3/Dashboardvip3';
 import Dashboardvip4 from '../Dashboardvip4/Dashboardvip4';
 import Dashboardvip5 from '../Dashboardvip5/Dashboardvip5';
 import Dashboardvip6 from '../Dashboardvip6/Dashboardvip6';
-
 
 const Dashboard = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/tasks');
+        const response = await axios.get(`${config.baseUrl}api/tasks`);
         setTaskList(response.data);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -45,7 +45,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/tasks/add', formData);
+      const response = await axios.post(`${config.baseUrl}api/tasks/add`, formData);
       setTaskList([...taskList, response.data]);
       setFormData({ url: '', taskName: '', taskDescription: '' });
     } catch (error) {
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      await axios.delete(`${config.baseUrl}api/tasks/${id}`);
       setTaskList(taskList.filter((task) => task._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -69,7 +69,6 @@ const Dashboard = () => {
 
   return (
     <>
- 
       <div className="logout-button">
         <button onClick={handleLogout}>Logout</button>
       </div>
@@ -157,7 +156,7 @@ const Dashboard = () => {
             </tbody>
           </table>
         </div>
-      </div>''
+      </div>
       <DashboardVip2 />
       <Dashboardvip3 />
       <Dashboardvip4 />

@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom';
 import './SignIn.css';
 import Logo from '../../assets/Bajaj1.png';
+import config from '../../config'; // Import config
 
 const SignIn = () => {
   const [mobileNumber, setMobileNumber] = useState('');
@@ -32,8 +33,8 @@ const SignIn = () => {
     setError(''); // Clear any previous error messages
 
     try {
-      // Make POST request to backend login API
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      // Make POST request to backend login API using the base URL from config
+      const response = await fetch(`${config.baseUrl}api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

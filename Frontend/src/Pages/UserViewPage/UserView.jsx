@@ -12,6 +12,7 @@ import WithdrawForm from '../../Component/WithDrawForm/WithdrawForm';
 import PurchaseVip from '../../Pages/PurchaseVips/PurchaseVip';
 import Referal from '../../Component/ReferalSecion/Referal';
 import Invest from '../InvestmentPage/Invest';
+import config from '../../config';  // Import config file
 
 const UserView = () => {
   const [activeSection, setActiveSection] = useState('Account');
@@ -22,7 +23,7 @@ const UserView = () => {
   useEffect(() => {
     const fetchWalletBalance = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/wallet', {
+        const response = await axios.get(`${config.baseUrl}api/auth/wallet`, {  // Use config.baseUrl here
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setWalletBalance(response.data.wallet);
@@ -37,7 +38,7 @@ const UserView = () => {
   useEffect(() => {
     const fetchVipAccess = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/vip-access', {
+        const response = await axios.get(`${config.baseUrl}api/auth/vip-access`, {  // Use config.baseUrl here
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setVipAccess(response.data.vipAccess);
@@ -99,7 +100,7 @@ const UserView = () => {
       case 'Refer and Earn':
         return <Referal />;
       case 'Investment': // Added "Investment" content placeholder
-      return <Invest />;
+        return <Invest />;
       default:
         return <p>Select a section from the sidebar.</p>;
     }
